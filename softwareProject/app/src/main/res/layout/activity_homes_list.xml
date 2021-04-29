@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    tools:context=".HomesListActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+
+        android:layout_height="wrap_content">
+
+        <ImageButton
+
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:onClick="goToProfile"
+            android:background="#fefefe"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_user"/>
+        <ImageButton
+            android:id="@+id/sort_home_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="#fefefefe"
+            android:src="@drawable/ic_caret_down"/>
+
+    </LinearLayout>
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="2pt"
+    android:background="@color/colorPrimary"/>
+    <ListView
+    android:id="@+id/listHomes_lv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:divider="#efefef"
+    android:dividerHeight="5dp"
+    tools:listitem="@layout/home_list_item"/>
+
+</LinearLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddHomesActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+
+        >
+
+<!--        <EditText-->
+<!--            android:id="@+id/ownerPhoneNumber_et"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="10dp"-->
+<!--            android:layout_margin="5dp"-->
+<!--            android:inputType="phone"-->
+<!--            android:hint="The owner's Phone No."-->
+
+<!--            />-->
+        <EditText
+            android:id="@+id/ownerHomeSite_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:maxLines="3"
+            android:maxLength="100"
+            android:layout_margin="5dp"
+
+            android:hint="Home site"
+
+            />
+        <EditText
+            android:id="@+id/numberOfRooms_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:maxLines="1"
+            android:maxLength="1"
+            android:inputType="numberSigned"
+            android:layout_margin="5dp"
+            android:hint="The number of rooms"
+
+            />
+        <EditText
+            android:id="@+id/housePrice_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            android:maxLines="1"
+            android:inputType="number"
+            android:maxLength="4"
+            android:hint="House price"
+
+            />
+        <EditText
+            android:id="@+id/homeDescription_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:maxLines="5"
+            android:maxLength="255"
+            android:layout_margin="5dp"
+            android:hint="Home description"
+
+            />
+        <RadioGroup
+            android:id="@+id/gender_rg"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender :"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:layout_margin="7dp"/>
+            <RadioButton
+                android:id="@+id/genderMale_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textSize="15sp"/>
+            <RadioButton
+                android:id="@+id/genderFemale_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textSize="15sp"/>
+            <RadioButton
+                android:id="@+id/genderDidNoMatter_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Did not matter"
+                android:textSize="15sp"/>
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+    <GridView
+
+        android:id="@+id/photoListHome_gv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#efefef"
+        android:dividerHeight="5dp"
+        android:numColumns="5"
+        tools:listitem="@layout/photo_grid_home"/>
+
+    </ScrollView>
+
+    </LinearLayout>
+    <Button
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+       android:background="#fefefe"
+        android:textStyle="bold"
+        android:onClick="add_house_btn"
+        android:textSize="18.0sp"
+        android:text="Add"/>
+</LinearLayout>
